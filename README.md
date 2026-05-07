@@ -89,7 +89,7 @@ Once logged in, you can create new operators, change passwords, and manage permi
 
    ```bash
    git clone https://github.com/caioalfer/GateManager.git
-   cd gatemanager
+   cd GateManager
    ```
 
 2. Install backend dependencies (Root folder):
