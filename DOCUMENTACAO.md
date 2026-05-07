@@ -4,7 +4,9 @@
 
 O **DockManager** é um sistema de alta performance focado na **gestão de docas e controle de acesso logístico** (entrada e saída de entregadores e motoboys). O principal objetivo da aplicação é substituir controles manuais ou planilhas por um sistema moderno, rápido e seguro, garantindo um fluxo operacional contínuo em ambientes de alto volume de trocas e carregamentos.
 
-A arquitetura do projeto utiliza um back-end leve e rápido (**Node.js** com **Express** e **SQLite**) integrado a um front-end moderno em **HTML/CSS/Vanilla JS**.
+A arquitetura do projeto utiliza um back-end leve e rápido (**Node.js** com **Express** e **SQLite**) integrado a um front-end robusto em **React** e **TypeScript** (Vite).
+
+**Fase Atual:** MVP (Minimum Viable Product) de Alta Fidelidade.
 
 ---
 
@@ -35,10 +37,11 @@ A arquitetura do projeto utiliza um back-end leve e rápido (**Node.js** com **E
   - O nome de quem operou a doca (operador logado).
   - O número/nome da doca associada.
 
-### 4. Gestão de Lojas
+### 4. Gestão de Lojas e Transportadoras
 
-- Possibilidade de recuperar lojas do banco de dados para abastecer a tela de registros.
-- Funcionalidade básica de adicionar nova loja diretamente da interface.
+- Interface dedicada para o CRUD completo (Adição, Listagem, Edição e Exclusão) de **Lojas**.
+- Controle de transportadoras e parceiros logísticos associados.
+- Filtros inteligentes para seleção de destino durante o registro.
 
 ### 5. Histórico e Auditoria
 
@@ -58,7 +61,8 @@ A arquitetura do projeto utiliza um back-end leve e rápido (**Node.js** com **E
 ## Tecnologias Empregadas
 
 - **Backend:** Node.js (Servidor), Express (Rotas e API), SQLite3 (Banco de Dados Local e leve).
-- **Frontend:** HTML5, CSS3, JS Puro (Vanilla).
+- **Frontend:** React, TypeScript, Vite.
+- **Gráficos:** Recharts para visualização de métricas em tempo real.
 - **Recursos Nativos Usados:** API `navigator.mediaDevices.getUserMedia` para habilitar acesso dinâmico à Webcam e Canvas API para registrar foto.
 - **Estilização e UX:** Glassmorphism, temas escuros, transições dinâmicas (micro-interações de Hover) e responsividade para adaptabilidade, com fontes do Google (`Outfit`).
 
@@ -68,10 +72,10 @@ A arquitetura do projeto utiliza um back-end leve e rápido (**Node.js** com **E
 
 Para levar a aplicação a um nível mais robusto e produtivo para clientes de grande porte, listam-se os seguintes pontos de evolução:
 
-1. **Gestão Visual Completa de Lojas e Transportadoras:**
+1. **Otimização de Performance para Escala (30k+ registros):**
 
-   - Tela/Aba exclusiva no sistema para **CRUD de Lojas** (ver, editar, adicionar e remover lojas), atualmente a criação ocorre sem muito refinamento visual (prompt).
-   - Tela/Aba de Transportadoras em formato de CRUD, e vinculação no cadastro do motorista selecionando num campo pre-definido (List/Select).
+   - Implementação de indexação avançada no banco de dados.
+   - Transição para PostgreSQL para suporte a alta concorrência.
 2. **Gerenciamento Seguro de Arquivos (Fotos):**
 
    - Atualmente, as capturas da webcam são convertidas em *Base64* e salvas diretamente no banco de dados SQLite. Isso engole o armazenamento do banco rapidamente.

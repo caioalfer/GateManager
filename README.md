@@ -2,6 +2,8 @@
 
 A modern, robust, and highly optimized system for gate management, access control, and dock logistics. Built with a strong focus on usability, security, and a premium design experience.
 
+**Project Status: 🚀 High-Fidelity MVP (Minimum Viable Product)**
+
 ## About the Project
 
 I developed this project individually, serving a dual purpose: as an intensive study project to improve my Full Stack skills, and as a real-world solution for the security and logistics department at the shopping mall where I work.
@@ -86,7 +88,7 @@ Once logged in, you can create new operators, change passwords, and manage permi
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/gatemanager.git
+   git clone https://github.com/caioalfer/GateManager.git
    cd gatemanager
    ```
 
@@ -112,14 +114,16 @@ Once logged in, you can create new operators, change passwords, and manage permi
 
 5. The application will be available at: `http://localhost:5173`
 
-## 🔒 Security Considerations & Roadmap
+## 🚀 Roadmap for Version 2.0 (Scalability & Production)
 
-As this system was initially designed for a local, trusted intranet environment (a shopping mall's internal network), some advanced web security features were deferred. If you intend to deploy GateManager to a public-facing server, the following security implementations are on the roadmap and highly recommended:
+GateManager was designed as a **high-fidelity MVP**. To evolve it into a platform capable of managing **over 30,000 records** and operating in distributed infrastructures, the roadmap includes:
 
-- **Authentication Tokens (JWT):** Currently, the system relies on client-side state for session management. Implementing JSON Web Tokens (JWT) for secure, stateless API route protection is the next priority step.
-- **HTTPS/SSL:** The application runs on HTTP by default. For production deployment over the internet, a reverse proxy (like Nginx) with an SSL certificate must be configured to encrypt sensitive data (Passwords, CPFs).
-- **Rate Limiting:** Implementing brute-force protection (e.g., `express-rate-limit`) on the login and registration endpoints.
-- **Strict CORS Policy:** The current CORS policy is permissive for easy local development. It should be restricted to specific allowed origins in production.
+- **Advanced Authentication (JWT):** Implementation of JSON Web Tokens and Refresh Tokens for robust, stateless security.
+- **Database Migration:** Transition from SQLite to **PostgreSQL** to support high concurrency and massive data volume.
+- **Service-Oriented Architecture:** Refactoring the backend to *Clean Architecture* or *Controllers/Services* patterns for easier long-term maintenance.
+- **Media Management (S3/Cloudinary):** Moving Base64 photos to cloud storage or dedicated disk space to optimize database performance.
+- **Automated Testing:** Implementation of unit tests (Jest) and E2E tests (Cypress) to ensure integrity across updates.
+- **Docker Infrastructure:** Full containerization for seamless deployment in Cloud environments.
 
 ## License
 
