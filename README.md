@@ -114,7 +114,7 @@ Once logged in, you can create new operators, change passwords, and manage permi
 
 5. The application will be available at: `http://localhost:5173`
 
-## 🚀 Roadmap for Version 2.0 (Scalability & Production)
+## Roadmap for Version 2.0 (Scalability & Production)
 
 GateManager was designed as a **high-fidelity MVP**. To evolve it into a platform capable of managing **over 30,000 records** and operating in distributed infrastructures, the roadmap includes:
 
