@@ -2,7 +2,7 @@
 
 A modern, robust, and highly optimized system for gate management, access control, and dock logistics. Built with a strong focus on usability, security, and a premium design experience.
 
-**Project Status: 🚀 High-Fidelity MVP (Minimum Viable Product)**
+**Project Status: High-Fidelity MVP (Minimum Viable Product)**
 
 ## About the Project
 
